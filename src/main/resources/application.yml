@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ecommerce-marketing-agent-demo
+server:
+  port: 8080
