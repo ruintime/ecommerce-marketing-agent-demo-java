@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>电商营销自动化 Agent Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="workspace">
+      <header class="topbar">
+        <div>
+          <h1>电商营销自动化 Agent</h1>
+          <p>Java 后端视角的 RAG、工具调用、审批与可观测 Demo</p>
+        </div>
+        <button id="loadToolsButton" class="ghost-button" type="button">查看工具</button>
+      </header>
+
+      <section class="chat-panel">
+        <div id="messages" class="messages">
+          <article class="message agent">
+            <span class="avatar">AI</span>
+            <div class="bubble">
+              <p>可以问我：为什么新人礼包活动 ROI 下降？也可以试试：给高价值流失用户发一张 20 元优惠券。</p>
+            </div>
+          </article>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <input id="questionInput" name="question" autocomplete="off" value="为什么新人礼包活动 ROI 下降？">
+          <button type="submit">发送</button>
+        </form>
+      </section>
+    </section>
+
+    <aside class="inspector">
+      <section>
+        <h2>执行计划</h2>
+        <ol id="planList"></ol>
+      </section>
+
+      <section>
+        <h2>RAG 证据</h2>
+        <div id="evidenceList" class="stack"></div>
+      </section>
+
+      <section>
+        <h2>工具调用</h2>
+        <div id="toolCallList" class="stack"></div>
+      </section>
+
+      <section>
+        <h2>待审批动作</h2>
+        <div id="pendingAction" class="stack muted">暂无</div>
+      </section>
+    </aside>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
